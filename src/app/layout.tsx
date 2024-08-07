@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 // TODO
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +30,7 @@ export default function RootLayout({
           name="description"
           content="A Star Wars app built with Next.js that shows the list of starwars characters and their individual characteristics"
         />
-        <title>Starwars | Discover starwars characters</title>
+        <title>Delfree.com</title>
         <meta
           name="keywords"
           content="starwars, starwars characters, starwars films, starwars species, starwars starships"
@@ -39,7 +40,9 @@ export default function RootLayout({
         <link rel="canonical" href="https://star-wars-app-lyart.vercel.app/" />
       </head>
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
+        </Providers>
       </body>
     </html>
   );

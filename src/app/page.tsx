@@ -45,7 +45,7 @@ export default async function HomePage() {
             Home
           </Text>
           <HydrationBoundary state={dehydratedState}>
-            <ProductList initialData={initialData} />
+            <ProductList />
           </HydrationBoundary>
         </Container>
       </Box>

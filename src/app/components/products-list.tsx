@@ -6,12 +6,10 @@ import { GetProductsResponse, Product } from "@/lib/types";
 import { useQuery } from "@tanstack/react-query";
 import ProductCard from "./product-card";
 import { notFound } from "next/navigation";
+import PaginationLarge from "./pagination-large";
+import PaginationSmall from "./pagination-small";
 
-export interface ProductListProps {
-  initialData: any;
-}
-
-export const ProductList = ({ initialData }: ProductListProps) => {
+export const ProductList = () => {
   const { data, isLoading, isError } = useQuery<GetProductsResponse>({
     queryKey: ["paginatedData"],
     queryFn: () => getProducts(),
@@ -22,6 +20,7 @@ export const ProductList = ({ initialData }: ProductListProps) => {
     notFound();
   }
 
+  console.log(data);
   return (
     <>
       <SimpleGrid
@@ -33,6 +32,10 @@ export const ProductList = ({ initialData }: ProductListProps) => {
             <ProductCard key={product.productId} product={product} />
           ))}
       </SimpleGrid>
+      {/* PaginationLarge is shown from 640 px */}
+      <PaginationLarge />
+      {/* PaginationSmall is shown up to 640 px */}
+      <PaginationSmall />
     </>
   );
 };

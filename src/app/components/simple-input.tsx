@@ -58,6 +58,7 @@ const SimpleInput = forwardRef<HTMLInputElement, SimpleInputProps>(
                   md: 5,
                 }}
                 onClick={handleClearSearch}
+                cursor="pointer"
               />
               <Box height="25px" mx={2} borderLeft={"1px solid grey"}></Box>
               <Image
@@ -68,6 +69,7 @@ const SimpleInput = forwardRef<HTMLInputElement, SimpleInputProps>(
                   sm: 5,
                   md: 6,
                 }}
+                cursor="pointer"
               />
             </Flex>
           </InputRightElement>

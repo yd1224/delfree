@@ -39,6 +39,7 @@ const AnimatedInput = forwardRef<HTMLInputElement, AnimatedInputProps>(
             top="23px"
             right="40px"
             onClick={handleSearchClick}
+            cursor="pointer"
           >
             <Image alt="Search icon" src="/icons/search.svg" boxSize={33} />
           </Box>
@@ -61,6 +62,7 @@ const AnimatedInput = forwardRef<HTMLInputElement, AnimatedInputProps>(
                   w={4}
                   h={5}
                   alt="Arrow icon"
+                  cursor="pointer"
                 />
               </InputLeftElement>
               <Input
@@ -92,6 +94,7 @@ const AnimatedInput = forwardRef<HTMLInputElement, AnimatedInputProps>(
                       md: 5,
                     }}
                     onClick={handleClearSearch}
+                    cursor="pointer"
                   />
                   <Box height="25px" mx={2} borderLeft="1px solid grey"></Box>
                   <Image
@@ -101,6 +104,7 @@ const AnimatedInput = forwardRef<HTMLInputElement, AnimatedInputProps>(
                       us: 5,
                       md: 6,
                     }}
+                    cursor="pointer"
                   />
                 </Flex>
               </InputRightElement>

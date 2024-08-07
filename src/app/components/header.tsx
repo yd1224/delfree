@@ -34,6 +34,9 @@ export default function Header() {
       py={4}
       borderBottom={"1px solid #e7e7e7"}
       alignContent={"center"}
+      position={"sticky"}
+      top={0}
+      zIndex={1000}
     >
       <Container
         px={{
